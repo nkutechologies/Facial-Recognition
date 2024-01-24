@@ -17,7 +17,9 @@ Before running the application, ensure you have the following dependencies insta
 - Node Js
 - Angular CLI
 - Angular Material
-
+- OpenAI
+- GP4-Model
+- Python
 
  ### Installation
 

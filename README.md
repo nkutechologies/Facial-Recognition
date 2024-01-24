@@ -38,7 +38,7 @@ ng serve
 Visit the provided URL (http://localhost:4200) in your web browser to access the Facial Recogintion application.
 
 ### Deployed URL
-Check out the live version of the app deployed at [https://facial.com.](https://facial-indol.vercel.app/)
+Check out the live version of the app deployed at [https://facial.com.](http://110.39.26.246:9003/)
 
 
 

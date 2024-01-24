@@ -1,0 +1,46 @@
+<router-outlet></router-outlet>
+<header>
+  <h1>Facial Recognition</h1>
+</header>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="text-center" style="margin-bottom: 0%;">Emotion Prediction</h2>
+          <button class="btn btn-outline-secondary mt-1 btn-block" type="submit" (click)="onSubmit()"
+            [disabled]="!selectedImage">
+            <ng-container *ngIf="!loading; else spinner">
+              Predict Emotion
+            </ng-container>
+            <ng-template #spinner>
+              <i class="fa fa-spinner fa-spin"></i>
+            </ng-template></button>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label" for="imageInput">Select an image:</label>
+              <input class="form-control" type="file" id="imageInput" (change)="onFileSelected($event)"
+                accept="image/*" />
+            </div>
+
+            <div *ngIf="selectedImage" class="mb-3">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4>Preview:</h4>
+                  <img [src]="imagePreview" alt="Selected Image" class="img-fluid" />
+                </div>
+                <div class="col-md-6 mt-3">
+                  <h4>Emotion Prediction Result:</h4>
+                  <p>{{ predictionResult }}</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
